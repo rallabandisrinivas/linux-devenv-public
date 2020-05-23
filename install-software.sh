@@ -8,6 +8,13 @@ function setup_entertainment_software {
   echo "" >> ~/snap/spotify/current/.config/spotify/Users/tldf-user/prefs
 }
 
+read -p "Use apt proxy? y/n" answer
+
+if [ $answer == "yes" ]; then
+  read -p "Enter URL of apt proxy: " answer
+  echo $answer | sudo tee -a /etc/apt/apt.conf.d/01proxy > /dev/null
+fi
+
 sudo apt autoremove -y
 
 sudo apt -y install software-properties-common apt-transport-https
