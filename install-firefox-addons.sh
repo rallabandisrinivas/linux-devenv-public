@@ -1,0 +1,50 @@
+#!/bin/bash
+
+
+### HowTo
+## Find "latest" url:
+# It usually contains hyphens as replacements for underscores
+# Go to the addon search web page of firefox. Search for the addon and go to its page. Look in the address bar. Use the addons name as it is displayed there as part of the download URL
+# Right click on the add addon button and copy link location is NOT the correct way to do it.
+
+wget -O https.xpi https://addons.mozilla.org/firefox/downloads/latest/https-everywhere&
+wget -O review.xpi https://addons.mozilla.org/firefox/downloads/latest/reviewmeta-com-review-helper&
+wget -O ublock.xpi https://addons.mozilla.org/firefox/downloads/latest/ublock-origin&
+wget -O noscript.xpi https://addons.mozilla.org/firefox/downloads/latest/noscript&
+wget -O nocookies.xpi https://addons.mozilla.org/firefox/downloads/latest/i-dont-care-about-cookies&
+wget -O facebookcontainer.xpi https://addons.mozilla.org/firefox/downloads/latest/facebook-container&
+
+read -p "Try this addon" answer
+echo "https://addons.mozilla.org/de/firefox/addon/youtube-audio/?src=featured"
+
+read -p "Try this addon" answer
+echo "https://addons.mozilla.org/de/firefox/addon/ghostery/?src=featured"
+
+read -p "Try this addon" answer
+echo "https://addons.mozilla.org/de/firefox/addon/adblock-for-youtube/?src=featured"
+
+echo "https://addons.mozilla.org/de/firefox/addon/turn-off-the-lights/?src=featured"
+
+sleep 2
+
+export startDir=$(pwd)
+# find default-release profile folder to add user specific configs to it
+export mozillaDir=$(find   ~/.mozilla -name "*default-release*" -type d)
+export target="${mozillaDir}/user.js"
+cp home/user/firefox/user.js $target
+
+export target="${mozillaDir}/chrome"
+mkdir -p $target
+export target="${mozillaDir}/chrome/userChrome.css"
+cp home/user/firefox/userChrome.css $target
+
+
+su -c "firefox ublock.xpi https.xpi review.xpi noscript.xpi nocookies.xpi facebookcontainer.xpi" user
+
+rm *.xpi
+
+read -p "Press enter to continue"
+
+read -p "Remember to manually enable the always encrypt mode on https everywhere addon"
+
+touch ~/.config/.firefoxIsInstalled

@@ -1,0 +1,50 @@
+mkdircd () {
+  mkdir "$@"
+  if [ "$1" = "-p" ]; then
+      cd "$2"
+  else
+      cd "$1"
+  fi
+}
+
+long_ls() {
+  local VAR="Permissions(UGO)|Owner|Group|Size|Modified|Name"
+
+  if [ ! "${1}" ]; then
+    echo -e "$VAR" | column -t -s"|" && ls -l --color=auto
+  else
+    echo -e "$VAR" | column -t -s"|" && ls -l --color=auto "${1}"
+  fi
+}
+
+# Aliases
+alias backuphome="zip -r backup.zip \.* -x \*.wine\*"
+alias gapac="git add -p && git commit"
+alias gapacpush="git add -p && git commit && git push"
+alias copy='xsel -ib'
+alias paste='xsel --clipboard'
+alias install="sudo apt install -y"
+alias update="sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y&"
+alias upgrade="sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y&"
+alias nnao="code"
+alias nnap="code"
+alias nano="code"
+alias idea="intellij-idea-community"
+alias code.="code ."
+alias ls="/bin/ls -alh --color=auto"
+alias ll="ls -alh --color=auto"
+alias lls="long_ls ${1}"
+alias dd="sudo -k dd status=progress "
+alias vmplayer="GTK_CSD=0 vmplayer&"
+alias cmd="io.elementary.terminal&"
+alias gti="git"
+alias gpull="git pull"
+alias gpu="git pull"
+alias mspaint="pinta"
+alias paint="pinta"
+alias cd..="cd .."
+alias ..="cd.."
+alias mvnci="mvn clean install -DskipTests=true"
+alias mvncit="mvn clean install"
+
+screenfetch

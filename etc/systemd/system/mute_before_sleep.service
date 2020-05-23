@@ -1,0 +1,11 @@
+[Unit]
+Description=Mute sound before suspend
+Before=suspend.target
+
+[Service]
+ExecStart=/var/suspend.sh
+User=user
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=suspend.target
