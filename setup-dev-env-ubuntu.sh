@@ -272,7 +272,7 @@ fi
 
 read -p "Do some system hardening? y/n?" answer
 
-if [ $answer == "yes" ]; then
+if [ $answer == "y" ]; then
   ./harden-ubuntu-baseos.sh
 fi
 
