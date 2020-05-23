@@ -270,6 +270,12 @@ if [ $answer == "y" ]; then
   ./install-ohmyzsh.sh
 fi
 
+read -p "Do some system hardening? y/n?" answer
+
+if [ $answer == "yes" ]; then
+  ./harden-ubuntu-baseos.sh
+fi
+
 read -p "Reboot now? y/n" answer
 
 if [ $answer == "y" ]; then
