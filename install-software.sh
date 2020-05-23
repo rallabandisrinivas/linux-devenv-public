@@ -12,7 +12,7 @@ read -p "Use apt proxy? y/n" answer
 
 if [ $answer == "y" ]; then
   read -p "Enter URL of apt proxy: " answer
-  echo $answer | sudo tee -a /etc/apt/apt.conf.d/01proxy > /dev/null
+  echo "Acquire::http::proxy \"${answer}\";" | sudo tee -a /etc/apt/apt.conf.d/01proxy > /dev/null
 fi
 
 sudo apt autoremove -y
