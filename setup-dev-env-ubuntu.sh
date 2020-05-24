@@ -7,7 +7,7 @@ sudo find /etc/apt/ -not -path '*/\.*' -type f -print0 | sudo xargs -0 sed -i 's
 sudo apt -y install git
 git config --global user.email "codingspiderfox@gmail.com"
 git config --global user.name "CodingSpiderFox"
-git remote set-url origin ssh://git@github.com/CodingSpiderFox/linux-devenv
+git remote set-url origin ssh://git@github.com/CodingSpiderFox/linux-devenv-public
 
 # the proxy vars are read from /etc/environment by snapd
 if [ -z "$http_proxy" ]; then
