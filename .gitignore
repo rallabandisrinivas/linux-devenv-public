@@ -19,3 +19,4 @@ raspi-utils/
 save*.*
 **/*.save
 signature.gpg
+rules.conf
