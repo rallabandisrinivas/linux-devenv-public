@@ -240,7 +240,16 @@ sudo apt-get install -y nodejs
 sudo chown -R $(whoami):$(whoami) ~/
 sudo chown -R $(whoami):$(whoami) /usr/lib/nodejs/
 sudo chown -R $(whoami):$(whoami) /usr/lib/node_modules/
-npm install -g npq
+sudo npm install -g npq
+sudo npm install -g @angular/cli
+sudo npm install -g typescript
+sudo npm install -g tslint
+sudo npm install -g protractor
+git clone https://github.com/teradata/covalent
+cd covalent
+npm ci
+npm run serve&
+cd ..
 
 read -p "Install jhispter? y/n" answer
 
