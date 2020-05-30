@@ -40,3 +40,7 @@ if [ $answer == "y" ]; then
 fi
 
 cd -
+
+cd /etc/apt/sources.list.d/
+find . -name "*" -exec sudo sed -i 's|deb http://|deb [trusted=yes] https://|g' {} \;
+cd -
