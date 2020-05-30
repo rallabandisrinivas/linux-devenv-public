@@ -3,9 +3,18 @@
 sudo ufw enable
 sudo ufw default deny incoming
 sudo ufw default deny outgoing
-sudo ufw allow out 22
+read -p "Enter a.b.c.d/e CIDR notation of your local network to allow port 80 outgoing to" answer
+sudo ufw allow out to $answer proto tcp port 80
+
+# if proxy file exists
+if test -f "/etc/apt/apt.conf.d/01proxy"; then
+  proxyFileContents=$(sudo cat /etc/apt/apt.conf.d/01proxy)
+  sudo ufw $(python3.6 utilityscripts/extractor.py "$proxyFileContents")
+fi
+
+sudo ufw allow out 22 proto tcp
 sudo ufw allow out 53
-sudo ufw allow out 443
+sudo ufw allow out 443 proto tcp
 
 sudo apt install unattended-upgrades nmap
 sudo apt-get update && sudo apt-get upgrade -y

@@ -94,10 +94,10 @@ EOF
 #TODO tdesktop (only if installed)
 
 #usage: name, command, keys
-python3 create-custom-shortcut.py 'show desktop' 'wmctrl -k on' '<Super>d'
-python3 create-custom-shortcut.py 'show desktop' 'wmctrl -k off' '<Shift><Super>d'
-python3 create-custom-shortcut.py 'open system settings' 'io.elementary.switchboard' '<Super>i'
-python3 create-custom-shortcut.py 'screenshot of selection' 'shutter --select' '<Shift><Super>s'
+python3 utilityscripts/create-custom-shortcut.py 'show desktop' 'wmctrl -k on' '<Super>d'
+python3 utilityscripts/create-custom-shortcut.py 'show desktop' 'wmctrl -k off' '<Shift><Super>d'
+python3 utilityscripts/create-custom-shortcut.py 'open system settings' 'io.elementary.switchboard' '<Super>i'
+python3 utilityscripts/create-custom-shortcut.py 'screenshot of selection' 'shutter --select' '<Shift><Super>s'
 
 rm ~/.config/plank/dock1/launchers/io.elementary.photos.dockitem
 cp home/user/.config/plank/dock1/launchers/* ~/.config/plank/dock1/launchers/
