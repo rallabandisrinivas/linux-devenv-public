@@ -20,3 +20,4 @@ save*.*
 **/*.save
 signature.gpg
 rules.conf
+jetbrains-toolbox.tar.gz
