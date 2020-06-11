@@ -14,6 +14,7 @@ fi
 
 sudo ufw allow out 22 proto tcp
 sudo ufw allow out 53
+sudo ufw allow out 80 proto tcp
 sudo ufw allow out 443 proto tcp
 
 sudo apt install unattended-upgrades nmap
