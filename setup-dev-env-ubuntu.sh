@@ -175,6 +175,7 @@ if [ $answer == "y" ]; then
   wget "https://plugins.jetbrains.com/files/7642/77136/intellij-plugin-save-actions-2.0.0.jar?updateId=77136&pluginId=7642&family=INTELLIJ" -O saveactions.zip
   wget "https://plugins.jetbrains.com/files/7792/35585/intellij-ansible-0.9.5.zip?updateId=35585&pluginId=7792&family=INTELLIJ" -O ansible.zip
   wget "https://plugins.jetbrains.com/files/10485/82843/Kubernetes.zip?updateId=82843&pluginId=10485&family=INTELLIJ" -O Kubernetes.zip
+  wget "https://plugins.jetbrains.com/files/2917/87572/regexTester-1.0.7.jar?updateId=87572&pluginId=2917&family=INTELLIJ" -O regexTester.zip
   mkdir -p $intellijDir
   cp *.zip $intellijDir
   cd $intellijDir
