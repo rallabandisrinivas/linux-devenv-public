@@ -136,3 +136,9 @@ cat etc/profile_elementary | sudo tee -a /etc/profile
 
 # dont display password stars
 sudo mv /etc/sudoers.d/pwfeedback /etc/sudoers.d/pwfeedback.disabled
+
+git clone https://github.com/CodingSpiderFox/files
+cd files
+git checkout feature/bluediskusagebars
+meson build --prefix=/usr && cd build && ninja && sudo ninja install
+cd -
