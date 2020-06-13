@@ -38,18 +38,23 @@ sudo add-apt-repository ppa:peek-developers/stable -y
 sudo add-apt-repository ppa:unit193/encryption -y
 sudo apt-add-repository -y ppa:system76-dev/stable -y
 sudo apt update
-sudo apt -y install flatpak woeusb wavemon tree curl net-tools bridge-utils wireshark dnsutils filezilla vim screen p7zip-full htop git make gcc perl gnome-tweaks npm maven graphviz openjdk-8-jdk libcanberra-gtk-module chromium-browser gnome-calculator shutter keepassxc ncdu qdirstat inkscape gimp gufw clamtk gedit iftop network-manager-openvpn-gnome gnome-tweaks p7zip-full p7zip-rar testdisk copyq seahorse wine-stable gparted simplescreenrecorder mercurial fwupd pidgin dconf-tools vlc fonts-font-awesome gitk mysql-workbench lynx pinta libreoffice traceroute openshot preload texmaker rclone kazam obs-studio peek kmetronome xrdp unclutter uuid-dev libndp-dev libsystemd-dev libjansson-dev libselinux1-dev libaudit-dev libpolkit-gobject-1-dev ppp-dev libmm-glib-dev libpsl-dev libnewt-dev libqt4-dev libreadline-dev python3-pip appstream-util libappindicator1 timeshift screenfetch nomacs radare2 veracrypt sshfs cifs-utils gnucash sqlitebrowser libva-glx2 vainfo audacity ubuntu-make system76-power chrome-gnome-shell libimage-exiftool-perl libgles2-mesa httrack ansible apt-file usbguard usbguard-applet-qt libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6 zfs-fuse mkchromecast qml-module-qtquick2 qml-module-qtquick-controls qml-module-qtquick-dialogs qml-module-qtquick-window2 qml-module-qtquick-layouts libxcb-xtest0 jq
+sudo apt -y install flatpak woeusb wavemon tree curl net-tools bridge-utils wireshark dnsutils filezilla vim screen p7zip-full htop git make gcc perl gnome-tweaks npm maven graphviz openjdk-8-jdk libcanberra-gtk-module chromium-browser gnome-calculator shutter keepassxc ncdu qdirstat inkscape gimp gufw clamtk gedit iftop network-manager-openvpn-gnome gnome-tweaks p7zip-full p7zip-rar testdisk copyq seahorse wine-stable gparted simplescreenrecorder mercurial fwupd pidgin dconf-tools vlc fonts-font-awesome gitk mysql-workbench lynx pinta libreoffice traceroute openshot preload texmaker rclone kazam obs-studio peek kmetronome xrdp unclutter uuid-dev libndp-dev libsystemd-dev libjansson-dev libselinux1-dev libaudit-dev libpolkit-gobject-1-dev ppp-dev libmm-glib-dev libpsl-dev libnewt-dev libqt4-dev libreadline-dev python3-pip appstream-util libappindicator1 timeshift screenfetch nomacs radare2 veracrypt sshfs cifs-utils gnucash sqlitebrowser libva-glx2 vainfo audacity ubuntu-make system76-power chrome-gnome-shell libimage-exiftool-perl libgles2-mesa httrack ansible apt-file usbguard usbguard-applet-qt libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6 zfs-fuse mkchromecast qml-module-qtquick2 qml-module-qtquick-controls qml-module-qtquick-dialogs qml-module-qtquick-window2 qml-module-qtquick-layouts libxcb-xtest0 jq libvirt-dev
 sudo usbguard generate-policy > rules.conf
 sudo install -m 0600 -o root -g root rules.conf /etc/usbguard/rules.conf
 sudo systemctl restart usbguard
 rm rules.conf
 
-# install terrafrom
 wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip  -O terraform.zip
+# install terrafrom
 unzip terraform.zip
 sudo mv terraform /usr/local/bin/
 terraform --version
 rm terraform.zip
+terraform init
+mkdir -p ~/.terraform.d/plugins
+go get github.com/dmacvicar/terraform-provider-libvirt
+go install github.com/dmacvicar/terraform-provider-libvirt
+cp ~/go/bin/terraform-provider-libvirt ~/.terraform.d/plugins
 
 sudo apt-file update
 sudo systemctl disable xrdp xrdp-sesman
