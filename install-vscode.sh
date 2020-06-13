@@ -35,26 +35,26 @@ if [ $answer == "y" ]; then
   code --install-extension ms-vscode.go $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
   code --install-extension dotjoshjohnson.xml $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
   code --install-extension ms-azuretools.vscode-docker $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
-  code --install-extension webfreak.debug $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension ms-vscode.cpptools $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension thiagoabreu.vala $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension vscjava.vscode-java-pack $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension esbenp.prettier-vscode $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension msjsdiag.debugger-for-chrome $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension dsznajder.es7-react-js-snippets $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension msjsdiag.vscode-react-native $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension eg2.tslint $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension pivotal.vscode-boot-dev-pack $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension zignd.html-css-class-completion $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension gencer.html-slim-scss-css-class-completion $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension abusaidm.html-snippets $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension cssho.vscode-svgviewer $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension jock.svg $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension rogalmic.bash-debug $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension peterjausovec.vscode-docker $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension eamodio.gitlens $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension technosophos.vscode-helm $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
-  code --install-extension rust-lang.rust $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code/
+  code --install-extension webfreak.debug $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension ms-vscode.cpptools $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension thiagoabreu.vala $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension vscjava.vscode-java-pack $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension esbenp.prettier-vscode $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension msjsdiag.debugger-for-chrome $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension dsznajder.es7-react-js-snippets $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension msjsdiag.vscode-react-native $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension eg2.tslint $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension pivotal.vscode-boot-dev-pack $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension zignd.html-css-class-completion $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension gencer.html-slim-scss-css-class-completion $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension abusaidm.html-snippets $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension cssho.vscode-svgviewer $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension jock.svg $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension rogalmic.bash-debug $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension peterjausovec.vscode-docker $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension eamodio.gitlens $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension technosophos.vscode-helm $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
+  code --install-extension rust-lang.rust $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
 
   mkdir -p ~/.config/Code/User
   cp home/user/.config/Code/User/* ~/.config/Code/User/
