@@ -44,14 +44,12 @@ sudo install -m 0600 -o root -g root rules.conf /etc/usbguard/rules.conf
 sudo systemctl restart usbguard
 rm rules.conf
 
-read -p "Install terraform? y/n" answer
-if [ $answer == "yes" ]; then
-  wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip  -O terraform.zip
-  unzip terraform.zip
-  sudo mv terraform /usr/local/bin/
-  terraform --version
-  rm terraform.zip
-fi
+# install terrafrom
+wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip  -O terraform.zip
+unzip terraform.zip
+sudo mv terraform /usr/local/bin/
+terraform --version
+rm terraform.zip
 
 sudo apt-file update
 sudo systemctl disable xrdp xrdp-sesman
