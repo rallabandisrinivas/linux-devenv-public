@@ -11,7 +11,7 @@ sudo apt install -y software-properties-common wmctrl
 sudo apt-add-repository ppa:philip.scott/elementary-tweaks -y
 sudo add-apt-repository ppa:go-for-it-team/go-for-it-stable -y
 sudo apt update
-sudo apt install -y glade elementary-tweaks gdebi elementary-sdk libchamplain-0.12-dev libchamplain-gtk-0.12-dev libclutter-1.0-dev libecal1.2-dev libedataserverui1.2-dev libfolks-dev libgee-0.8-dev libgeocode-glib-dev libgeoclue-2-dev libglib2.0-dev libgranite-dev libgtk-3-dev libical-dev meson valac libswitchboard-2.0-dev libnm-dev libnma-dev poedit gnome-builder devhelp com.github.danrabbit.lookbook go-for-it com.github.babluboy.nutty libvte-2.91-dev
+sudo apt install -y glade elementary-tweaks gdebi elementary-sdk libchamplain-0.12-dev libchamplain-gtk-0.12-dev libclutter-1.0-dev libecal1.2-dev libedataserverui1.2-dev libfolks-dev libgee-0.8-dev libgeocode-glib-dev libgeoclue-2-dev libglib2.0-dev libgranite-dev libgtk-3-dev libical-dev meson valac libswitchboard-2.0-dev libnm-dev libnma-dev poedit gnome-builder devhelp com.github.danrabbit.lookbook go-for-it com.github.babluboy.nutty libvte-2.91-dev libgit2-glib-1.0-dev libcloudproviders-dev libnotify-dev libcanberra-dev
 
 read -p "Set key binding behaviour like windows 10? (y/n)" answer
 
