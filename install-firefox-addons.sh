@@ -40,7 +40,7 @@ export target="${mozillaDir}/chrome/userChrome.css"
 cp home/user/firefox/userChrome.css $target
 
 
-su -c "firefox ublock.xpi https.xpi review.xpi noscript.xpi nocookies.xpi facebookcontainer.xpi" user
+su -c "firefox ublock.xpi https.xpi review.xpi noscript.xpi nocookies.xpi facebookcontainer.xpi videospeed.xpi" user
 
 rm *.xpi
 
