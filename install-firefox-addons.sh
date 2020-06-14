@@ -13,6 +13,7 @@ wget -O ublock.xpi https://addons.mozilla.org/firefox/downloads/latest/ublock-or
 wget -O noscript.xpi https://addons.mozilla.org/firefox/downloads/latest/noscript&
 wget -O nocookies.xpi https://addons.mozilla.org/firefox/downloads/latest/i-dont-care-about-cookies&
 wget -O facebookcontainer.xpi https://addons.mozilla.org/firefox/downloads/latest/facebook-container&
+wget -O videospeed.xpi https://addons.mozilla.org/firefox/downloads/latest/videospeed/&
 
 read -p "Try this addon" answer
 echo "https://addons.mozilla.org/de/firefox/addon/youtube-audio/?src=featured"
