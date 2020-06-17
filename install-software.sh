@@ -16,7 +16,7 @@ if [ $answer == "y" ]; then
 fi
 
 sudo apt autoremove -y
-
+sudo apt update
 sudo apt -y install software-properties-common apt-transport-https
 
 # install frequently used software straightway
