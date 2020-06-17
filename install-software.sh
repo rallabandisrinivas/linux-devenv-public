@@ -155,7 +155,7 @@ fi
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo install broot
 
-wget https://installers.privateinternetaccess.com/download/pia-linux-1.8-04193.run -O pia.run
+wget https://installers.privateinternetaccess.com/download/pia-linux-2.1-04977.run -O pia.run
 chmod u+x pia.run
 ./pia.run
 rm pia.run
