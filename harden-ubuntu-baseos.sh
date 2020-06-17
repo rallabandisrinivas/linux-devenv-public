@@ -17,7 +17,7 @@ sudo ufw allow out 53
 sudo ufw allow out 80 proto tcp
 sudo ufw allow out 443 proto tcp
 
-sudo apt install unattended-upgrades nmap
+sudo apt install -y unattended-upgrades nmap
 sudo apt-get update && sudo apt-get upgrade -y
 sudo systemctl stop cups.service
 sudo systemctl disable cups.service
