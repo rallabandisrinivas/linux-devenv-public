@@ -15,17 +15,6 @@ wget -O nocookies.xpi https://addons.mozilla.org/firefox/downloads/latest/i-dont
 wget -O facebookcontainer.xpi https://addons.mozilla.org/firefox/downloads/latest/facebook-container&
 wget -O videospeed.xpi https://addons.mozilla.org/firefox/downloads/latest/videospeed/&
 
-read -p "Try this addon" answer
-echo "https://addons.mozilla.org/de/firefox/addon/youtube-audio/?src=featured"
-
-read -p "Try this addon" answer
-echo "https://addons.mozilla.org/de/firefox/addon/ghostery/?src=featured"
-
-read -p "Try this addon" answer
-echo "https://addons.mozilla.org/de/firefox/addon/adblock-for-youtube/?src=featured"
-
-echo "https://addons.mozilla.org/de/firefox/addon/turn-off-the-lights/?src=featured"
-
 sleep 2
 
 export startDir=$(pwd)
