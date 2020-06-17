@@ -15,6 +15,7 @@ hosts/
 home/user/.config/all-repos/*.json
 netbox-docker/
 jetbrains/
+files/
 raspi-utils/
 save*.*
 **/*.save
