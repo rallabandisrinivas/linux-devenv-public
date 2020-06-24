@@ -45,7 +45,7 @@ sudo apt -y install mysql-workbench shutter dconf-tools libqt4-dev
 
 read -p "Install usbguard? y/n" answer
 if [ $answer == "y" ]; then
-  sudo apt install -y usbguard-applet-qt usbguard 
+  sudo apt install -y usbguard-applet-qt usbguard
   sudo usbguard generate-policy > rules.conf
   sudo install -m 0600 -o root -g root rules.conf /etc/usbguard/rules.conf
   sudo systemctl restart usbguard
