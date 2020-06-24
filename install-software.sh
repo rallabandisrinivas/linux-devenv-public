@@ -137,6 +137,7 @@ echo "PATH=\$PATH:/snap/bin" >> ~/.profile
 source ~/.profile
 
 snap install fkill
+snap install photogimp
 
 read -p "Install gaming software? y/n" install_gamingsoftware
 
