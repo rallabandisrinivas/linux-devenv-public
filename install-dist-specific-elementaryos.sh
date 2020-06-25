@@ -46,6 +46,9 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 'u
 gsettings set io.elementary.desktop.wingpanel.power show-percentage true
 
 gsettings set io.elementary.files.preferences single-click false
+gsettings set io.elementary.files.preferences date-format 'iso'
+gsettings set io.elementary.files.preferences show-hiddenfiles true
+gsettings set io.elementary.files.preferences default-viewmode list
 
 # Set Elementary OS Files as default file browser
 sudo xdg-mime default io.elementary.files.desktop inode/directory application/x-gnome-saved-search
@@ -58,14 +61,12 @@ sudo xdg-mime default io.elementary.files.desktop  $(grep MimeType /usr/share/ap
 sudo apt purge -y epiphany-browser epiphany-browser-data pantheon-mail audience io.elementary.code noise
 
 gsettings set io.elementary.desktop.wingpanel.power show-percentage true
-gsettings set io.elementary.files.preferences date-format 'iso'
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 #gsettings set org.pantheon.desktop.gala.behavior hotcorner-topleft 'open-launcher'
 #gsettings set org.pantheon.desktop.gala.behavior hotcorner-topright 'window-overview-all'
 #gsettings set org.pantheon.desktop.gala.behavior hotcorner-bottomright 'show-workspace-view'
 #gsettings set org.pantheon.desktop.gala.behavior hotcorner-bottomleft 'show-workspace-view'
 gsettings set org.pantheon.desktop.gala.behavior overlay-action 'wingpanel --toggle-indicator=app-launcher'
-gsettings set io.elementary.files.preferences single-click false
 #gsettings set io.elementary.code.settings font 'Ubuntu Mono 12'
 #gsettings set io.elementary.code.settings auto-indent true
 #gsettings set io.elementary.code.settings autosave false
