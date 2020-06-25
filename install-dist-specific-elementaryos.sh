@@ -146,4 +146,4 @@ git pull upstream master
 meson build --prefix=/usr && cd build && ninja && sudo ninja install
 cd -
 
-io.elementary.files ftp://devenv@datensenke/devenv&
+io.elementary.files "ftp://devenv@datensenke/devenv"&
