@@ -174,3 +174,5 @@ sudo gem install overcommit
 sudo sysctl vm.swappiness=10
 
 ./install-ohmyzsh.sh
+
+read -p "Remember to setup SSH key (chmod 0600)" answer
