@@ -1,4 +1,4 @@
-##!/bin/bash
+#!/bin/bash
 
 sudo ufw enable
 sudo ufw default deny incoming
@@ -12,9 +12,13 @@ if test -f "/etc/apt/apt.conf.d/01proxy"; then
   sudo ufw $(python3.6 utilityscripts/extractor.py "$proxyFileContents")
 fi
 
+echo "Allow SSH outbound"
 sudo ufw allow out 22 proto tcp
+echo "Allow DNS outbound"
 sudo ufw allow out 53
+echo "Allow HTTP outbound"
 sudo ufw allow out 80 proto tcp
+echo "Allow HTTPS outbound"
 sudo ufw allow out 443 proto tcp
 
 sudo apt install -y unattended-upgrades nmap
@@ -43,5 +47,5 @@ fi
 cd -
 
 cd /etc/apt/sources.list.d/
-find . -name "*" -exec sudo sed -i 's|deb http://|deb [trusted=yes] https://|g' {} \;
+find . -name "*.list" -exec sudo sed -i 's|deb http://|deb [trusted=yes] https://|g' {} \;
 cd -
