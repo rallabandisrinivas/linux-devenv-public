@@ -147,41 +147,45 @@ if [ $answer == "y" ]; then
     export intellijDir=$(find   ~/ -name "*.IntelliJIdea*" -type d)
   fi
 
-  export intellijDir="${intellijDir}/config/plugins/"
-  export startDir=$(pwd)
-  mkdir ijplugins/
-  cd ijplugins
-  wget "https://plugins.jetbrains.com/files/12206/69769/codestream-jb-4.0.1+18.zip?updateId=69769&pluginId=12206&family=INTELLIJ" -O "CodeStream.zip"
-  wget "https://plugins.jetbrains.com/files/7179/63619/MavenRunHelper.zip?updateId=63619&pluginId=7179&family=INTELLIJ" -O "MavenHelper.zip"
-  wget "https://plugins.jetbrains.com/files/8015/66212/bitbucket-linky.zip?updateId=66212&pluginId=8015&family=INTELLIJ" -O "BitbucketLinky.zip"
-  wget "https://plugins.jetbrains.com/files/6317/67665/lombok-plugin-0.26.2-2019.2.zip?updateId=67665&pluginId=6317&family=INTELLIJ" -O "Lombok.zip"
-  wget "https://plugins.jetbrains.com/files/1065/66249/checkstyle-idea-5.31.0.zip?updateId=66249&pluginId=1065&family=INTELLIJ" -O "Checkstyle-idea.zip"
-  wget "https://plugins.jetbrains.com/files/10080/66362/repo-5.21.zip?updateId=66362&pluginId=10080&family=INTELLIJ" -O "Rainbowbrackets.zip"
-  wget "https://plugins.jetbrains.com/files/7638/68066/codota-3.0.4.zip?updateId=68066&pluginId=7638&family=INTELLIJ" -O "Codota.zip"
-  wget "https://plugins.jetbrains.com/files/7724/68006/Docker.zip?updateId=68006&pluginId=7724&family=INTELLIJ" -O "Docker.zip"
-  wget "https://plugins.jetbrains.com/files/1800/68136/DBN-18.0.zip?updateId=68136&pluginId=1800&family=INTELLIJ" -O "Databasenavigator.zip"
-  wget "https://plugins.jetbrains.com/files/7495/66736/idea-gitignore-3.2.1.192.zip?updateId=66736&pluginId=7495&family=INTELLIJ" -O "Gitignoreaddon.zip"
-  wget "https://plugins.jetbrains.com/files/7973/66755/SonarLint-4.1.0.3312.zip?updateId=66755&pluginId=7973&family=INTELLIJ" -O "SonarLint.zip"
-  wget "https://plugins.jetbrains.com/files/4509/63731/Statistic-3.5.jar?updateId=63731&pluginId=4509&family=INTELLIJ" -O "Statistic.zip"
-  wget "https://plugins.jetbrains.com/files/9792/67862/IntelliJ-Key-Promoter-X-2019.2.3.zip?updateId=67862&pluginId=9792&family=INTELLIJ" -O "KeyPromoterX.zip"
-  wget "https://plugins.jetbrains.com/files/8527/65404/gjf.zip?updateId=65404&pluginId=8527&family=INTELLIJ" -O "google-java-format.zip"
-  wget "https://plugins.jetbrains.com/files/10229/44968/intellij-spring-assistant-0.12.0.zip?updateId=44968&pluginId=10229&family=INTELLIJ" -O "springAssistant.zip"
-  wget "https://plugins.jetbrains.com/plugin/download?rel=true&updateId=52308" -O "run_configuration_as_action.zip"
-  wget "https://plugins.jetbrains.com/files/3146/45792/infinitest-intellij-5.2.0-dist.zip?updateId=45792&pluginId=3146&family=INTELLIJ" -O "Infinitest.zip"
-  wget "https://plugins.jetbrains.com/files/1137/78319/PMD-Intellij.zip?updateId=78319&pluginId=1137&family=INTELLIJ" -O PMDPlugin.zip
-  wget "https://plugins.jetbrains.com/plugin/download?rel=true&updateId=60412" -O QAPlug.zip
-  wget "https://plugins.jetbrains.com/files/9960/72483/JsonToKotlinClass-3.5.1.zip?updateId=72483&pluginId=9960&family=INTELLIJ" -O JSONToKotlinClass.zip
-  wget "https://plugins.jetbrains.com/files/11585/58981/kotlintest-intellij-plugin-3.3.0.11.zip?updateId=58981&pluginId=11585&family=INTELLIJ" -O kotlintest.zip
-  wget "https://plugins.jetbrains.com/files/7642/77136/intellij-plugin-save-actions-2.0.0.jar?updateId=77136&pluginId=7642&family=INTELLIJ" -O saveactions.zip
-  wget "https://plugins.jetbrains.com/files/7792/35585/intellij-ansible-0.9.5.zip?updateId=35585&pluginId=7792&family=INTELLIJ" -O ansible.zip
-  wget "https://plugins.jetbrains.com/files/10485/82843/Kubernetes.zip?updateId=82843&pluginId=10485&family=INTELLIJ" -O Kubernetes.zip
-  wget "https://plugins.jetbrains.com/files/2917/87572/regexTester-1.0.7.jar?updateId=87572&pluginId=2917&family=INTELLIJ" -O regexTester.zip
-  mkdir -p $intellijDir
-  cp *.zip $intellijDir
-  cd $intellijDir
-  unzip \*.zip
-  cd $startDir
-  mv ijplugins ~/Downloads/
+  read -p "Download intellij plugins? y/n" answer
+
+  if [ $answer == "y" ]; then
+    export intellijDir="${intellijDir}/config/plugins/"
+    export startDir=$(pwd)
+    mkdir ijplugins/
+    cd ijplugins
+    wget "https://plugins.jetbrains.com/files/12206/69769/codestream-jb-4.0.1+18.zip?updateId=69769&pluginId=12206&family=INTELLIJ" -O "CodeStream.zip"
+    wget "https://plugins.jetbrains.com/files/7179/63619/MavenRunHelper.zip?updateId=63619&pluginId=7179&family=INTELLIJ" -O "MavenHelper.zip"
+    wget "https://plugins.jetbrains.com/files/8015/66212/bitbucket-linky.zip?updateId=66212&pluginId=8015&family=INTELLIJ" -O "BitbucketLinky.zip"
+    wget "https://plugins.jetbrains.com/files/6317/67665/lombok-plugin-0.26.2-2019.2.zip?updateId=67665&pluginId=6317&family=INTELLIJ" -O "Lombok.zip"
+    wget "https://plugins.jetbrains.com/files/1065/66249/checkstyle-idea-5.31.0.zip?updateId=66249&pluginId=1065&family=INTELLIJ" -O "Checkstyle-idea.zip"
+    wget "https://plugins.jetbrains.com/files/10080/66362/repo-5.21.zip?updateId=66362&pluginId=10080&family=INTELLIJ" -O "Rainbowbrackets.zip"
+    wget "https://plugins.jetbrains.com/files/7638/68066/codota-3.0.4.zip?updateId=68066&pluginId=7638&family=INTELLIJ" -O "Codota.zip"
+    wget "https://plugins.jetbrains.com/files/7724/68006/Docker.zip?updateId=68006&pluginId=7724&family=INTELLIJ" -O "Docker.zip"
+    wget "https://plugins.jetbrains.com/files/1800/68136/DBN-18.0.zip?updateId=68136&pluginId=1800&family=INTELLIJ" -O "Databasenavigator.zip"
+    wget "https://plugins.jetbrains.com/files/7495/66736/idea-gitignore-3.2.1.192.zip?updateId=66736&pluginId=7495&family=INTELLIJ" -O "Gitignoreaddon.zip"
+    wget "https://plugins.jetbrains.com/files/7973/66755/SonarLint-4.1.0.3312.zip?updateId=66755&pluginId=7973&family=INTELLIJ" -O "SonarLint.zip"
+    wget "https://plugins.jetbrains.com/files/4509/63731/Statistic-3.5.jar?updateId=63731&pluginId=4509&family=INTELLIJ" -O "Statistic.zip"
+    wget "https://plugins.jetbrains.com/files/9792/67862/IntelliJ-Key-Promoter-X-2019.2.3.zip?updateId=67862&pluginId=9792&family=INTELLIJ" -O "KeyPromoterX.zip"
+    wget "https://plugins.jetbrains.com/files/8527/65404/gjf.zip?updateId=65404&pluginId=8527&family=INTELLIJ" -O "google-java-format.zip"
+    wget "https://plugins.jetbrains.com/files/10229/44968/intellij-spring-assistant-0.12.0.zip?updateId=44968&pluginId=10229&family=INTELLIJ" -O "springAssistant.zip"
+    wget "https://plugins.jetbrains.com/plugin/download?rel=true&updateId=52308" -O "run_configuration_as_action.zip"
+    wget "https://plugins.jetbrains.com/files/3146/45792/infinitest-intellij-5.2.0-dist.zip?updateId=45792&pluginId=3146&family=INTELLIJ" -O "Infinitest.zip"
+    wget "https://plugins.jetbrains.com/files/1137/78319/PMD-Intellij.zip?updateId=78319&pluginId=1137&family=INTELLIJ" -O PMDPlugin.zip
+    wget "https://plugins.jetbrains.com/plugin/download?rel=true&updateId=60412" -O QAPlug.zip
+    wget "https://plugins.jetbrains.com/files/9960/72483/JsonToKotlinClass-3.5.1.zip?updateId=72483&pluginId=9960&family=INTELLIJ" -O JSONToKotlinClass.zip
+    wget "https://plugins.jetbrains.com/files/11585/58981/kotlintest-intellij-plugin-3.3.0.11.zip?updateId=58981&pluginId=11585&family=INTELLIJ" -O kotlintest.zip
+    wget "https://plugins.jetbrains.com/files/7642/77136/intellij-plugin-save-actions-2.0.0.jar?updateId=77136&pluginId=7642&family=INTELLIJ" -O saveactions.zip
+    wget "https://plugins.jetbrains.com/files/7792/35585/intellij-ansible-0.9.5.zip?updateId=35585&pluginId=7792&family=INTELLIJ" -O ansible.zip
+    wget "https://plugins.jetbrains.com/files/10485/82843/Kubernetes.zip?updateId=82843&pluginId=10485&family=INTELLIJ" -O Kubernetes.zip
+    wget "https://plugins.jetbrains.com/files/2917/87572/regexTester-1.0.7.jar?updateId=87572&pluginId=2917&family=INTELLIJ" -O regexTester.zip
+    mkdir -p $intellijDir
+    cp *.zip $intellijDir
+    cd $intellijDir
+    unzip \*.zip
+    cd $startDir
+    mv ijplugins ~/Downloads/
+  fi
 
   sudo /bin/su -c "echo 'fs.inotify.max_user_watches = 524288' >> /etc/sysctl.conf"
   sudo sysctl -p --system
