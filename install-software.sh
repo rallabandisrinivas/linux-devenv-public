@@ -70,22 +70,6 @@ sudo apt -y remove cups-browsed
 mkdir -p ~/.config
 cp home/user/.config/mimeapps.list ~/.config/
 
-read -p 'In der Konfiguration "/etc/usbguard/usbguard-daemon.conf" sind kleine Anpassungen empfehlenswert, bevor man USBGuard verwendet:
-
-    Mit strengen Regeln wird sichergestellt, dass alle Regeln auch für USB Spielzeuge angewendet, die bereits vor dem Booten angeschlossen wurden:
-    PresentDevicePolicy	= apply-policy
-    PresentControllerPolicy  	= apply-policy
-    Es kann allerdings vorkommen, dass man eine kaputte Tastatur mal austauschen muss. Mit strengen Regeln hat man sich dann ausgesperrt. Als etwas lockere Variante kann man alle Geräte zulassen, die beim Bootes des Rechners angeschlossen sind:
-    PresentDevicePolicy	= allow
-    PresentControllerPolicy  	= apply-policy
-    Gegen "Evil Maid" Angriffe (jemand bootet den Rechner in Abwesenheit des Besitzers und nutzt ein BadUSB Device), schützt eine vollständige Verschlüsselung der Festplatte. Somit ist das Risiko durch etwas lockere Einstellungen überschaubar.'
-
-sudo usbguard generate-policy > rules.conf
-sudo cp rules.conf /etc/usbguard/rules.conf
-sudo chmod 0600 /etc/usbguard/rules.conf
-sudo systemctl start usbguard
-sudo usbguard list-devices
-
 read -p "Install anaconda y/n?" answer
 
 if [ $answer == "y" ]; then
