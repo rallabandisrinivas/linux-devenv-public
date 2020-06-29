@@ -2,7 +2,7 @@
 
 function setup_entertainment_software {
   sudo chown -R $(whoami):$(whoami) ~/
-  snap install telegram-desktop signal-desktop spotify && spotify&
+  sudo snap install telegram-desktop signal-desktop spotify && spotify&
   sleep 10
   mkdir -p ~/snap/spotify/current/.config/spotify/Users/tldf-user
   echo "" >> ~/snap/spotify/current/.config/spotify/Users/tldf-user/prefs
