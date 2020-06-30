@@ -1,0 +1,4 @@
+deb [trusted=yes] https://ppa.launchpad.net/bashtop-monitor/bashtop/ubuntu bionic main
+# deb-src http://ppa.launchpad.net/bashtop-monitor/bashtop/ubuntu bionic main
+# deb-src http://ppa.launchpad.net/bashtop-monitor/bashtop/ubuntu bionic main
+# deb-src http://ppa.launchpad.net/bashtop-monitor/bashtop/ubuntu bionic main

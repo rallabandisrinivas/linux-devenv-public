@@ -1,0 +1,4 @@
+deb [trusted=yes] https://ppa.launchpad.net/peek-developers/stable/ubuntu bionic main
+# deb-src http://ppa.launchpad.net/peek-developers/stable/ubuntu bionic main
+# deb-src http://ppa.launchpad.net/peek-developers/stable/ubuntu bionic main
+# deb-src http://ppa.launchpad.net/peek-developers/stable/ubuntu bionic main

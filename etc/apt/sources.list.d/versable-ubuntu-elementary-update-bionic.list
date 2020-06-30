@@ -1,0 +1,4 @@
+deb [trusted=yes] https://ppa.launchpad.net/versable/elementary-update/ubuntu bionic main
+# deb-src http://ppa.launchpad.net/versable/elementary-update/ubuntu bionic main
+# deb-src http://ppa.launchpad.net/versable/elementary-update/ubuntu bionic main
+# deb-src http://ppa.launchpad.net/versable/elementary-update/ubuntu bionic main
