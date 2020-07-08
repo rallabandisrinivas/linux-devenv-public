@@ -3,7 +3,7 @@
 gsettings set org.gnome.DejaDup last-restore "''"
 gsettings set org.gnome.DejaDup last-restore "''"
 gsettings set org.gnome.DejaDup periodic "true"
-gsettings set org.gnome.DejaDup periodic-period "7"
+gsettings set org.gnome.DejaDup periodic-period "1"
 gsettings set org.gnome.DejaDup full-backup-period "90"
 gsettings set org.gnome.DejaDup backend "'remote'"
 gsettings set org.gnome.DejaDup last-run "'2020-07-08T17:16:03.270477Z'"
