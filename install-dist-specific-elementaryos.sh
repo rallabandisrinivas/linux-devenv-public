@@ -44,7 +44,8 @@ sudo apt install -y glade \
                     libcloudproviders-dev \
                     libnotify-dev \
                     libcanberra-dev \
-                    libzeitgeist-2.0-de
+                    libzeitgeist-2.0-de \
+                    libindicator3-dev
 
 
 read -p "Set key binding behaviour like windows 10? (y/n)" answer
