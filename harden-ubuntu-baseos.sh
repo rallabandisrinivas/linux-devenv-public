@@ -6,7 +6,8 @@ sudo ufw default deny outgoing
 read -p "Enter a.b.c.d/e CIDR notation of your local network to allow port 80 outgoing to" answer
 sudo ufw allow out to $answer proto tcp port 80
 
-# if proxy file exists
+# if proxy file exists - generate rule that allows http access to local apt proxy
+# the python script determines destination address and port automatically from proxyFileContents
 if test -f "/etc/apt/apt.conf.d/01proxy"; then
   proxyFileContents=$(sudo cat /etc/apt/apt.conf.d/01proxy)
   sudo ufw $(python3.6 utilityscripts/extractor.py "$proxyFileContents")
