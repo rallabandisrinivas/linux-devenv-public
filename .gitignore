@@ -17,6 +17,7 @@ netbox-docker/
 jetbrains/
 files/
 raspi-utils/
+wingpanel-indicator-ayatana/
 save*.*
 **/*.save
 signature.gpg
