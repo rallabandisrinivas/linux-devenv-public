@@ -47,6 +47,10 @@ fi
 
 cd -
 
-cd /etc/apt/sources.list.d/
-find . -name "*.list" -exec sudo sed -i 's|deb http://|deb [trusted=yes] https://|g' {} \;
-cd -
+read -p "Switch all apt sources to https?" answer
+
+if [ $answer == "y" ]; then
+  cd /etc/apt/sources.list.d/
+  find . -name "*.list" -exec sudo sed -i 's|deb http://|deb [trusted=yes] https://|g' {} \;
+  cd -
+fi
