@@ -121,7 +121,7 @@ snap install kontena-lens --classic
 read -p "Do you want to remove the default ubuntu folders \"Music\", etc. (y/n)?" answer
 
 if [ $answer == "y" ]; then
-  sudo rm -rf ~/Music ~/Videos ~/Public
+  sudo rm -rf ~/Music ~/Videos ~/Public ~/Templates
 fi
 
 read -p "Install android studio? (y/n)" answer

@@ -2,7 +2,7 @@
 
 function setup_entertainment_software {
   sudo chown -R $(whoami):$(whoami) ~/
-  snap install telegram-desktop signal-desktop spotify && spotify&
+  sudo snap install telegram-desktop signal-desktop spotify && spotify&
   sleep 10
   mkdir -p ~/snap/spotify/current/.config/spotify/Users/tldf-user
   echo "" >> ~/snap/spotify/current/.config/spotify/Users/tldf-user/prefs
@@ -39,7 +39,7 @@ sudo add-apt-repository ppa:unit193/encryption -y
 sudo apt-add-repository -y ppa:system76-dev/stable -y
 sudo add-apt-repository ppa:bashtop-monitor/bashtop -y
 sudo apt update
-sudo apt -y install flatpak woeusb wavemon tree curl net-tools bridge-utils wireshark dnsutils filezilla vim screen p7zip-full htop git make gcc perl gnome-tweaks npm maven graphviz openjdk-8-jdk libcanberra-gtk-module chromium-browser gnome-calculator keepassxc ncdu qdirstat inkscape gimp gufw clamtk gedit iftop network-manager-openvpn-gnome gnome-tweaks p7zip-full p7zip-rar testdisk copyq seahorse wine-stable gparted simplescreenrecorder mercurial fwupd pidgin vlc fonts-font-awesome gitk lynx pinta libreoffice traceroute openshot preload texmaker rclone kazam obs-studio peek kmetronome xrdp unclutter uuid-dev libndp-dev libsystemd-dev libjansson-dev libselinux1-dev libaudit-dev libpolkit-gobject-1-dev ppp-dev libmm-glib-dev libpsl-dev libnewt-dev libreadline-dev python3-pip appstream-util libappindicator1 timeshift screenfetch nomacs radare2 veracrypt sshfs cifs-utils gnucash sqlitebrowser libva-glx2 vainfo audacity ubuntu-make system76-power chrome-gnome-shell libimage-exiftool-perl libgles2-mesa httrack ansible apt-file libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6 zfs-fuse mkchromecast qml-module-qtquick2 qml-module-qtquick-controls qml-module-qtquick-dialogs qml-module-qtquick-window2 qml-module-qtquick-layouts libxcb-xtest0 jq libvirt-dev remmina bashtop duplicity golang-go xdotool vagrant deja-dup tesseract-ocr-deu kdeconnect
+sudo apt -y install flatpak woeusb wavemon tree curl net-tools bridge-utils wireshark dnsutils filezilla vim screen p7zip-full htop git make gcc perl gnome-tweaks npm maven graphviz openjdk-8-jdk libcanberra-gtk-module chromium-browser gnome-calculator keepassxc ncdu qdirstat inkscape gimp gufw clamtk gedit iftop network-manager-openvpn-gnome gnome-tweaks p7zip-full p7zip-rar testdisk copyq seahorse wine-stable gparted simplescreenrecorder mercurial fwupd pidgin vlc fonts-font-awesome gitk lynx pinta libreoffice traceroute openshot preload texmaker rclone kazam obs-studio peek kmetronome xrdp unclutter uuid-dev libndp-dev libsystemd-dev libjansson-dev libselinux1-dev libaudit-dev libpolkit-gobject-1-dev ppp-dev libmm-glib-dev libpsl-dev libnewt-dev libreadline-dev python3-pip appstream-util libappindicator1 timeshift screenfetch nomacs radare2 veracrypt sshfs cifs-utils gnucash sqlitebrowser libva-glx2 vainfo audacity ubuntu-make system76-power chrome-gnome-shell libimage-exiftool-perl libgles2-mesa httrack ansible apt-file libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6 zfs-fuse mkchromecast qml-module-qtquick2 qml-module-qtquick-controls qml-module-qtquick-dialogs qml-module-qtquick-window2 qml-module-qtquick-layouts libxcb-xtest0 jq libvirt-dev remmina bashtop duplicity golang-go xdotool vagrant deja-dup tesseract-ocr-deu openjfx kdeconnect
 # must be kept separately because otherwise installation of previous package fails. Reason is that the following packages are not available on vanilla ubuntu installations
 sudo apt -y install mysql-workbench shutter dconf-tools libqt4-dev
 
@@ -69,22 +69,6 @@ sudo systemctl disable xrdp xrdp-sesman
 sudo apt -y remove cups-browsed
 mkdir -p ~/.config
 cp home/user/.config/mimeapps.list ~/.config/
-
-read -p 'In der Konfiguration "/etc/usbguard/usbguard-daemon.conf" sind kleine Anpassungen empfehlenswert, bevor man USBGuard verwendet:
-
-    Mit strengen Regeln wird sichergestellt, dass alle Regeln auch für USB Spielzeuge angewendet, die bereits vor dem Booten angeschlossen wurden:
-    PresentDevicePolicy	= apply-policy
-    PresentControllerPolicy  	= apply-policy
-    Es kann allerdings vorkommen, dass man eine kaputte Tastatur mal austauschen muss. Mit strengen Regeln hat man sich dann ausgesperrt. Als etwas lockere Variante kann man alle Geräte zulassen, die beim Bootes des Rechners angeschlossen sind:
-    PresentDevicePolicy	= allow
-    PresentControllerPolicy  	= apply-policy
-    Gegen "Evil Maid" Angriffe (jemand bootet den Rechner in Abwesenheit des Besitzers und nutzt ein BadUSB Device), schützt eine vollständige Verschlüsselung der Festplatte. Somit ist das Risiko durch etwas lockere Einstellungen überschaubar.'
-
-sudo usbguard generate-policy > rules.conf
-sudo cp rules.conf /etc/usbguard/rules.conf
-sudo chmod 0600 /etc/usbguard/rules.conf
-sudo systemctl start usbguard
-sudo usbguard list-devices
 
 read -p "Install anaconda y/n?" answer
 
