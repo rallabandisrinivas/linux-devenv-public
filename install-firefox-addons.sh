@@ -14,6 +14,7 @@ wget -O noscript.xpi https://addons.mozilla.org/firefox/downloads/latest/noscrip
 wget -O nocookies.xpi https://addons.mozilla.org/firefox/downloads/latest/i-dont-care-about-cookies&
 wget -O facebookcontainer.xpi https://addons.mozilla.org/firefox/downloads/latest/facebook-container&
 wget -O videospeed.xpi https://addons.mozilla.org/firefox/downloads/latest/videospeed/&
+wget -O darkreader.xpi https://addons.mozilla.org/firefox/downloads/latest/darkreader/&
 
 sleep 2
 
@@ -29,7 +30,7 @@ export target="${mozillaDir}/chrome/userChrome.css"
 cp home/user/firefox/userChrome.css $target
 
 
-su -c "firefox ublock.xpi https.xpi review.xpi noscript.xpi nocookies.xpi facebookcontainer.xpi videospeed.xpi" user
+su -c "firefox ublock.xpi https.xpi review.xpi noscript.xpi nocookies.xpi facebookcontainer.xpi videospeed.xpi darkreader.xpi" user
 
 rm *.xpi
 
