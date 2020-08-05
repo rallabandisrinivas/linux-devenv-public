@@ -159,4 +159,10 @@ sudo sysctl vm.swappiness=10
 
 ./install-ohmyzsh.sh
 
+# Install thunderbird dark theme stylesheet for message windows
+## find default-release profile folder to add user specific configs to it
+export thunderbirdDir=$(find   ~/.thunderbird -name "*default-release*" -type d)
+export target="${thunderbirdDir}/user.js"
+cp home/user/.thunderbird/user.js $target
+
 read -p "Remember to setup SSH key (chmod 0600)" answer

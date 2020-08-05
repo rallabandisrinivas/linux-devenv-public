@@ -18,7 +18,7 @@ wget -O darkreader.xpi https://addons.mozilla.org/firefox/downloads/latest/darkr
 
 sleep 2
 
-export startDir=$(pwd)
+# Install user.js
 # find default-release profile folder to add user specific configs to it
 export mozillaDir=$(find   ~/.mozilla -name "*default-release*" -type d)
 export target="${mozillaDir}/user.js"
