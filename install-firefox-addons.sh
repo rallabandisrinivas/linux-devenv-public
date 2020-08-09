@@ -36,6 +36,8 @@ rm *.xpi
 
 read -p "Press enter to continue"
 
+read -p "Remember to enable dark theme throug menu -> addons -> themes"
+
 read -p "Remember to manually enable the always encrypt mode on https everywhere addon"
 
 touch ~/.config/.firefoxIsInstalled
