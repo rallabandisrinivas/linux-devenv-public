@@ -57,7 +57,6 @@ sudo apt -y install flatpak \
                     make \
                     gcc \
                     perl \
-                    gnome-tweaks \
                     npm \
                     maven \
                     graphviz \
