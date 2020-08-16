@@ -24,6 +24,7 @@ if [ $answer == "y" ]; then
 
   echo "Proxy args for vscode extension installation: $proxyArgsForVsCodeExtensions"
 
+  code --install-extension kameshkotwani.google-search $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
   code --install-extension hashicorp.terraform $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
   code --install-extension samuelcolvin.jinjahtml $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
   code --install-extension coolbear.systemd-unit-file $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
