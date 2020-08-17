@@ -161,8 +161,6 @@ sudo cp etc/default/grub /etc/default/grub
 sudo cp etc/rc.local /etc/
 
 sudo cp cp etc/xdg/autostart/indicator-application.desktop /etc/xdg/autostart/
-wget https://ppa.launchpad.net/elementary-os/stable/ubuntu/pool/main/w/wingpanel-indicator-ayatana/wingpanel-indicator-ayatana_2.0.3+r27+pkg17\~ubuntu0.4.1.1_amd64.deb --no-check-certificate
-sudo dpkg -i wingpanel-indicator-ayatana_2.0.3+r27+pkg17~ubuntu0.4.1.1_amd64.deb
 # remove all deb package files downloaded
 rm *.deb*
 

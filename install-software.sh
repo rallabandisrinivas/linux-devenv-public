@@ -207,8 +207,6 @@ if [ $answer == "y" ]; then
   bash ~/anaconda.sh -b -p $HOME/anaconda
 fi
 
-echo "screenfetch" | sudo tee -a /etc/profile
-
 git clone https://github.com/StevenBlack/hosts
 cd hosts/
 pip3 install -r requirements.txt
