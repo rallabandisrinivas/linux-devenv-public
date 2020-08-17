@@ -46,5 +46,3 @@ alias cd..="cd .."
 alias ..="cd.."
 alias mvnci="mvn clean install -DskipTests=true"
 alias mvncit="mvn clean install"
-
-screenfetch
