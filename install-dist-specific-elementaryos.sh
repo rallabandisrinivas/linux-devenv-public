@@ -10,6 +10,7 @@ sudo apt install -y software-properties-common wmctrl
 
 sudo apt-add-repository ppa:philip.scott/elementary-tweaks -y
 sudo add-apt-repository ppa:go-for-it-team/go-for-it-stable -y
+sudo add-apt-repository ppa:vala-team -y
 sudo apt update
 sudo apt install -y glade \
                     elementary-tweaks \
