@@ -169,7 +169,11 @@ sudo apt -y install flatpak \
                     openjfx \
                     kdeconnect \
                     inotify-tools \
-                    bleachbit
+                    bleachbit \
+                    texstudio \
+                    lyx \
+                    perl-tk \
+                    xzdec
 # must be kept separately because otherwise installation of previous package fails. Reason is that the following packages are not available on vanilla ubuntu installations
 sudo apt -y install mysql-workbench shutter dconf-tools libqt4-dev
 
