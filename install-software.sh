@@ -38,6 +38,8 @@ sudo add-apt-repository ppa:peek-developers/stable -y
 sudo add-apt-repository ppa:unit193/encryption -y
 sudo apt-add-repository -y ppa:system76-dev/stable -y
 sudo add-apt-repository ppa:bashtop-monitor/bashtop -y
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC243565B2087BC3F897C9277A7293F59E4889
+echo "deb https://miktex.org/download/ubuntu bionic universe" | sudo tee /etc/apt/sources.list.d/miktex.list
 sudo apt update
 sudo apt -y install flatpak \
                     woeusb \
@@ -173,7 +175,8 @@ sudo apt -y install flatpak \
                     texstudio \
                     lyx \
                     perl-tk \
-                    xzdec
+                    xzdec \
+                    miktex
 # must be kept separately because otherwise installation of previous package fails. Reason is that the following packages are not available on vanilla ubuntu installations
 sudo apt -y install mysql-workbench shutter dconf-tools libqt4-dev
 
