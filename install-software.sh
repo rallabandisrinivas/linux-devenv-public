@@ -301,3 +301,9 @@ export target="${thunderbirdDir}/user.js"
 cp home/user/.thunderbird/user.js $target
 
 read -p "Remember to setup SSH key (chmod 0600)" answer
+
+wget https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz -O FoxitReader.run.tar.gz
+tar xvf FoxitReader.run.tar.gz 
+sudo ./FoxitReader.enu.setup.2.4.4.0911(r057d814).x64.run
+
+sudo ln -s /home/user/opt/foxitsoftware/foxitreader /bin/foxitreader
