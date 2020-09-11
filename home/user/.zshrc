@@ -79,5 +79,6 @@ alias ..="cd.."
 alias mvnci="mvn clean install -DskipTests=true"
 alias mvncit="mvn clean install"
 alias npm="npq-hero"
+alias pdf=firefox
 builtin . /usr/share/io.elementary.terminal/enable-zsh-completion-notifications || builtin true
 screenfetch
