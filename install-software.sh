@@ -176,7 +176,9 @@ sudo apt -y install flatpak \
                     lyx \
                     perl-tk \
                     xzdec \
-                    miktex
+                    miktex \
+                    texlive-fonts-extra \
+                    texlive-luatex
 # must be kept separately because otherwise installation of previous package fails. Reason is that the following packages are not available on vanilla ubuntu installations
 sudo apt -y install mysql-workbench shutter dconf-tools libqt4-dev
 
