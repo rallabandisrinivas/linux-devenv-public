@@ -23,7 +23,8 @@ if [ $answer == "y" ]; then
   fi
 
   echo "Proxy args for vscode extension installation: $proxyArgsForVsCodeExtensions"
-
+  
+  code --skip-getting-started --install-extension tabnine.tabnine-vscode $proxyArgsForVsCodeExtensions --force --user-data-dir /home/user/.config/Code
   code --install-extension james-yu.latex-workshop $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
   code --install-extension kameshkotwani.google-search $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
   code --install-extension hashicorp.terraform $proxyArgsForVsCodeExtensions --force --user-data-dir ~/.config/Code
